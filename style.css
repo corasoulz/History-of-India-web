@@ -1,0 +1,215 @@
+/* --- Global Reset and Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Using a classic, highly readable serif font for the article content */
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    line-height: 1.7; /* Enhanced line spacing for readability */
+    color: #333;
+    background-color: #f8f8f8; /* Very light, off-white background */
+}
+
+/* --- Navigation Header (Reused from previous article) --- */
+header {
+    background-color: #4CAF50; /* Primary Green */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Arial', sans-serif; /* Sans-serif for navigation */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Nav Links Styling */
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.nav-right a:hover {
+    background-color: #43a047; /* Slightly darker green on hover */
+}
+
+/* Search Bar Styling */
+.nav-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.search-form {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 8px 15px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+}
+
+.search-form button {
+    background-color: #ff9800; /* Orange submit button */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #fb8c00;
+}
+
+/* --- Main Article Content --- */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50; /* Dark, authoritative color */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #4CAF50; /* Green separator line */
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #ff9800; /* Orange accent */
+    line-height: 1.3;
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #4CAF50; /* Green for subheadings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+p {
+    margin-bottom: 1.7em; /* Consistent paragraph spacing */
+    text-align: justify;
+}
+
+/* Ensure <br> tags don't create excessive space but rather provide a controlled line break */
+p br {
+    display: block;
+    content: "";
+    margin-top: 0.5em; 
+}
+
+
+/* --- Responsive Design for Smaller Screens --- */
+@media (max-width: 950px) {
+    .nav-center {
+        /* Hide search bar on small screens to prioritize links */
+        display: none;
+    }
+
+    .nav-container {
+        /* Re-align remaining items when search is hidden */
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-right a {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .nav-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-right a {
+        margin: 0;
+        padding: 8px 5px;
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

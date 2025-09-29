@@ -1,0 +1,151 @@
+/* --- Global Reset and Body Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Light background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* --- Header Styles (Matching Previous Aesthetic) --- */
+header {
+    background-color: #4CAF50; /* Primary Green */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* --- Main Content & Form Container --- */
+main {
+    flex-grow: 1; /* Pushes footer to the bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px; /* Standard form width */
+    margin-bottom: 20px;
+    border-top: 5px solid #ff9800; /* Orange top border accent */
+}
+
+/* --- Form Field Styling --- */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50; /* Green focus highlight */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* --- Remember Me Checkbox Styling --- */
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Style the remember me label alignment */
+div:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+/* --- Submit Button Styling --- */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9800; /* Primary Orange button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #fb8c00; /* Darker orange on hover */
+    transform: translateY(-1px);
+}
+
+/* --- Auxiliary Links (Sign up, Reset) --- */
+main p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+main a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+main a:hover {
+    color: #388e3c; /* Darker green on hover */
+    text-decoration: underline;
+}
+
+/* --- Footer Styles --- */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    color: #999;
+    background-color: white;
+    font-size: 0.8rem;
+}
+
+/* --- Media Queries for smaller screens --- */
+@media (max-width: 500px) {
+    form {
+        margin-top: 0;
+        padding: 20px;
+    }
+}
